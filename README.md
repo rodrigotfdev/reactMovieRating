@@ -1,4 +1,4 @@
-# Project Documentation for usePopcorn
+# Project Documentation for reactMovieRating
 
 The **usePopcorn** project is a React application designed to allow users to search and access movie information. Additionally, it provides functionality for users to add movies to their watched list while assigning personal ratings to each movie.
 
@@ -43,3 +43,11 @@ This project makes use of the OMDB API to retrieve movie details, employs React 
 You can preview the application at the following link: [NETLIFY LIVE APP PREVIEW](https://incandescent-belekoy-dd9130.netlify.app/)
 
 or clone the repository to your computer and run 'npm install' and 'npm run dev' in the terminal to open it.
+
+## Project Images
+
+![image](https://github.com/rodrigotfdev/reactMovieRating/assets/52326702/3d4c4deb-660e-4605-8cde-5166e1e63c6d)
+
+![image](https://github.com/rodrigotfdev/reactMovieRating/assets/52326702/33b69760-0b6c-4d00-bea3-e1d9fbb1025e)
+
+
