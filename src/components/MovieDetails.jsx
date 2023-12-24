@@ -8,7 +8,8 @@ export default function MovieDetails({
   onAddWatched,
   watched,
 }) {
-  const KEY = "f84fc31d";
+  // const KEY = "f84fc31d";
+  const KEY = "623a16ce";
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
@@ -44,13 +45,13 @@ export default function MovieDetails({
     onAddWatched(newWatchedMovie);
     onCloseMovie();
   }
-
+// `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
   useEffect(
     function () {
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${selectedId}`
+          `https://www.omdbapi.com/?i=${selectedId}&apikey=${KEY}`,
         );
         const data = await res.json();
         setMovie(data);
