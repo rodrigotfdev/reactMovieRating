@@ -69,7 +69,7 @@ export default function App() {
           setMovies(data.Search);
           setError("");
         } catch (err) {
-          if (err.name !== "AborError") {
+          if (err.name !== "AbortError") {
             setError(err.message);
           }
         } finally {
