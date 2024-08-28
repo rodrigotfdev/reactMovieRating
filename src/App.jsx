@@ -13,6 +13,7 @@ import MovieDetails from "./components/MovieDetails";
 import WatchedSummary from "./components/WatchedSummary";
 import WatchedMoviesList from "./components/WatchedMoviesList";
 import { useMovies } from "./useMovies";
+import { useLocalStorageState } from "./useLocalStorageState";
 
 // const KEY = "ed42b9e3";
 // const KEY = "f84fc31d";
@@ -24,12 +25,9 @@ export default function App() {
   const [selectedId, setSelectedId] = useState(null);
   const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
 
-  // const [watched, setWatched] = useState(function () {
-  //   const storedValue = localStorage.getItem("watched");
-  //   return JSON.parse(storedValue);
-  // });
+  const [watched, setWatched] = useLocalStorageState([], 'watched')
 
-  const [watched, setWatched] = useState([]);
+
 
   // fetch(`http://www.omdbapi.com/?apikey=${apiKEY}&`);
 
@@ -51,12 +49,7 @@ export default function App() {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
 
-  // useEffect(
-  //   function () {
-  //     localStorage.setItem("watched", JSON.stringify(watched));
-  //   },
-  //   [watched]
-  // );
+  
 
   return (
     <>
