@@ -33,8 +33,11 @@ The **usePopcorn** project is a React application designed to allow users to sea
 ### Key Functionalities
 
 ✅ **Movie Search**: Users can search for movies based on their titles.
+
 ✅ **Movie Details**: Clicking on a movie in the search results displays specific details about that movie.
+
 ✅ **Add to Watched List**: Users have the capability to add movies to their watched list and assign personal ratings.
+
 ✅ **Display Watched Movies**: Watched movies are showcased along with details and ratings provided by the user.
 
 ## Code Structure and Logic
