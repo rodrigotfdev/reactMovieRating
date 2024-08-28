@@ -20,14 +20,16 @@ export const apiKEY = "623a16ce";
 const tempQuery = "Batman";
 
 export default function App() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("Fast");
   const [selectedId, setSelectedId] = useState(null);
   const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
 
-  const [watched, setWatched] = useState(function () {
-    const storedValue = localStorage.getItem("watched");
-    return JSON.parse(storedValue);
-  });
+  // const [watched, setWatched] = useState(function () {
+  //   const storedValue = localStorage.getItem("watched");
+  //   return JSON.parse(storedValue);
+  // });
+
+  const [watched, setWatched] = useState([]);
 
   // fetch(`http://www.omdbapi.com/?apikey=${apiKEY}&`);
 
