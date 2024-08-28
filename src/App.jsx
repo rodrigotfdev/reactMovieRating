@@ -20,7 +20,7 @@ export const apiKEY = "623a16ce";
 const tempQuery = "Batman";
 
 export default function App() {
-  const [query, setQuery] = useState("Fast");
+  const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
   const { movies, isLoading, error } = useMovies(query, handleCloseMovie);
 
